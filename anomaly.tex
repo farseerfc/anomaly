@@ -1,0 +1,186 @@
+%\documentclass[CJK]{beamer}  
+%\usetheme[left,width=5em]{Goettingen}
+\usepackage{xeCJK}
+\makeatletter
+\newcommand{\newinfo}[1]{}
+\makeatother
+
+\usepackage{fontspec,xunicode,xltxtra,listings}
+
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{tikz,xcolor}
+\usetikzlibrary{shapes,arrows,shadows,mindmap,backgrounds}
+
+
+\setbeamercovered{transparent}
+\setbeamertemplate{items}[circle]
+\renewcommand{\figurename}{図}
+\newtheorem{definationfc}{定義}
+
+\usepackage[overlap,CJK]{ruby}
+\usepackage{multicol}
+%\usepackage[sort&compress]{natbib}
+%\usepackage{chapterbib}
+
+\newcommand{\backupbegin}{
+   \newcounter{framenumberappendix}
+   \setcounter{framenumberappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \addtocounter{framenumberappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumberappendix}} 
+}
+
+\newcommand{\fcshadow}[1]{%
+\tikz\path[anchor=north west]
+node[fill opacity=0.1] at (0.05em,-0.05em) {#1}
+node[fill opacity=0.1] at (0.03em,-0.05em) {#1}
+node[fill opacity=0.1] at (0.05em,-0.03em) {#1}
+node[fill opacity=0.1] at (0.05em,-0.07em) {#1}
+node[fill opacity=0.1] at (0.07em,-0.05em) {#1}
+node at (0pt,0pt) {#1};}
+
+
+\setCJKmainfont{MS PGothic}
+\setCJKsansfont{Meiryo UI} %[Mapping=tex-text]
+\setCJKmonofont{Courier New}
+%\usefonttheme{serif}
+\setmainfont{Droid Serif}
+\setsansfont{Droid Sans} %[Mapping=tex-text]
+\setmonofont{Droid Sans Mono}
+
+\def\beamer@linkspace#1{%
+  \begin{pgfpicture}{0pt}{-1.5pt}{#1}{5.5pt}
+    \pgfsetfillopacity{0}
+    \pgftext[x=0pt,y=-1.5pt]{.}
+    \pgftext[x=#1,y=5.5pt]{.}
+  \end{pgfpicture}}
+
+\lstset{tabsize=4, %
+  frame=shadowbox, %把代码用带有阴影的框圈起来
+  commentstyle=\color{red!50!green!50!blue!50},%浅灰色的注释
+  rulesepcolor=\color{red!20!green!20!blue!20},%代码块边框为淡青色
+  keywordstyle=\color{blue!90}\bfseries, %代码关键字的颜色为蓝色，粗体
+  showstringspaces=false,%不显示代码字符串中间的空格标记
+  stringstyle=\ttfamily, % 代码字符串的特殊格式
+  keepspaces=true, %
+  breakindent=22pt, %
+  numbers=left,%左侧显示行号
+  stepnumber=1,%
+  numberstyle=\tiny, %行号字体用小号
+  basicstyle=\footnotesize, %
+  showspaces=false, %
+  flexiblecolumns=true, %
+  breaklines=true, %对过长的代码自动换行
+  breakautoindent=true,%
+  breakindent=4em, %
+  aboveskip=1em, %代码块边框
+  %% added by http://bbs.ctex.org/viewthread.php?tid=53451
+  fontadjust,
+  captionpos=t,
+  framextopmargin=2pt,framexbottommargin=2pt,abovecaptionskip=-3pt,belowcaptionskip=3pt,
+  xleftmargin=4em,xrightmargin=4em, % 设定listing左右的空白
+  texcl=true,
+  % 设定中文冲突，断行，列模式，数学环境输入，listing数字的样式
+  extendedchars=false,columns=flexible,mathescape=true
+  numbersep=-1em
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Active Refinement of Clone Anomaly Reports]{Active Refinement of Clone Anomaly Reports}
+
+\subtitle[MD 輪講]{MD 輪講}
+
+\author[大阪大学大学院CS専攻\quad{}楊　嘉晨]{修士課程1年\quad{}楊　嘉晨}
+\institute[楠本研]{大阪大学大学院 コンピュータサイエンス専攻 楠本研究室}
+\date{2012年7月4日（火）}
+
+\pgfdeclareimage[height=0.618cm]{logo}{figure/logo.pdf}
+\logo{\pgfuseimage{logo}}
+
+\mode<article>{\providecommand{\imageheight}{0.2\textheight}}
+\mode<presentation>{\providecommand{\imageheight}{0.4\textheight}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+
+\mode<presentation>{
+
+\providecommand{\newblock}{\\}
+\providecommand{\toprule}{\hline}
+\providecommand{\midrule}{\hline}
+\providecommand{\bottomrule}{\hline}
+\providecommand{\itemtitle}[1]{\item \alert{#1} \quad{} }
+}
+
+\mode<article>{
+\renewenvironment{columns}{\begin{multicols}{2}}{\end{multicols}\\}
+\renewenvironment{column}[1]{}{}
+}
+
+\XeTeXlinebreaklocale "jp"  
+\XeTeXlinebreakskip = 0pt plus 1pt 
+
+\frame{\titlepage} 
+\mode<article>{\maketitle}
+
+\begin{frame}<trans|beamer>[shrink=10]{目次}
+\tableofcontents[sectionstyle=show/hide,subsectionstyle=hide,subsubsectionstyle=hide] 
+\end{frame}
+
+
+\AtBeginSubsection[]{
+  \begin{frame}<trans|beamer>{\insertsection}
+
+\begin{center}
+\Huge\insertsubsection
+%\tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
+\end{center}
+
+  \end{frame}
+}
+
+
+\begin{frame}{123456789012345678901234567890}
+12345678901234567890123456789012345678901234567890
+2345678901234567890123456789012345678901234567890
+34\fcshadow{567890123}4567890123456789012345678901234567890
+45678901234567890123456789012345678901234567890
+5678901234567890123456789012345678901234567890
+678901234567890123456789012345678901234567890
+78901234567890123456789012345678901234567890
+8901234567890123456789012345678901234567890
+901234567890123456789012345678901234567890
+01234567890123456789012345678901234567890
+1234567890123456789012345678901234567890
+234567890123456789012345678901234567890
+34567890123456789012345678901234567890
+4567890123456789012345678901234567890
+\end{frame}
+
+\begin{frame}
+\begin{block}{aaa}
+aaa
+\end{block}
+
+\begin{itemize}
+\item 12
+\item 34
+\end{itemize}
+\begin{enumerate}
+\item 12
+\item 34
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{\fcshadow{Example}}
+%\newcommand\fcshadow[2]{
+%\begin{tikzpicture}\node[black!50] at (1pt,1pt) {#1};\node at (0pt,0pt) {#2};\end{tikzpicture}
+%}
+
+\fcshadow{Example}
+\fcshadow{\Large Example}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
