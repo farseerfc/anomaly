@@ -5,7 +5,7 @@ SIZE=14pt
 MAIN=anomaly
 LATEX=latexmk -xelatex 
 
-all: 169 43 article notes
+all: 169 43 notes
 
 dist:
 	mkdir -p output
@@ -15,7 +15,7 @@ dist:
 	echo "\\$(INTERACTION)" >$(MAIN).169.tex
 	echo "\\documentclass[aspectratio=169,$(SIZE),$@]{beamer}" >>$(MAIN).$@.tex
 	echo "\\setbeameroption{notes on second screen}"  >>$(MAIN).$@.tex
-	echo "\\usetheme[left,width=5em]{Goettingen}" >>$(MAIN).$@.tex
+	cat 169.tex >>$(MAIN).$@.tex
 	echo "\\input{$(MAIN).tex}" >>$(MAIN).$@.tex
 	$(LATEX) $(MAIN).$@ 
 	makebeamerinfo -t sane $(MAIN).$@.pdf
@@ -24,8 +24,7 @@ dist:
 	echo "\\$(INTERACTION)" >$(MAIN).$@.tex
 	echo "\\documentclass[aspectratio=43,$(SIZE),$@]{beamer}" >>$(MAIN).$@.tex
 	echo "\\setbeameroption{notes on second screen}"  >>$(MAIN).$@.tex
-	echo "\\usetheme{Warsaw}" >>$(MAIN).$@.tex
-	echo "\\useoutertheme{infolines}" >>$(MAIN).$@.tex
+	cat 43.tex >>$(MAIN).$@.tex
 	echo "\\input{$(MAIN).tex}" >>$(MAIN).$@.tex
 	$(LATEX) $(MAIN).$@ 
 	makebeamerinfo -t sane $(MAIN).$@.pdf

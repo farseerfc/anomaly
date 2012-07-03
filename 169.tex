@@ -1,0 +1,31 @@
+\usetheme[left,width=5em]{Goettingen}
+
+\makeatletter
+\setbeamertemplate{sidebar left}
+{
+\beamer@tempdim=\beamer@sidebarwidth%
+\advance\beamer@tempdim by -6pt%
+{\usebeamerfont{title in sidebar}%
+  \vskip1.5em%
+  \hskip3pt%
+  \usebeamercolor[fg]{title in sidebar}%
+  \insertshorttitle[width=\beamer@tempdim,center,respectlinebreaks]\par%
+  \vskip1.25em%
+}%
+{%
+  \hskip3pt%
+  \usebeamercolor[fg]{author in sidebar}%
+  \usebeamerfont{author in sidebar}%
+  \insertshortauthor[width=\beamer@tempdim,center,respectlinebreaks]\par%
+  \vskip1.25em%
+}%
+%\insertverticalnavigation{\beamer@sidebarwidth}%
+\tableofcontents[sectionstyle=show/show,subsectionstyle=show/show/show]
+{\vskip3em%
+\hskip3pt\insertdate%
+\vskip3em%
+\footnotesize
+\hskip3pt\insertframenumber/\inserttotalframenumber}%
+\vfill
+}%
+\makeatother
