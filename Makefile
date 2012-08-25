@@ -5,7 +5,7 @@ SIZE=14pt
 MAIN=anomaly
 LATEX=latexmk -xelatex 
 
-all: 169 43 notes
+all: 169 43 
 
 dist:
 	mkdir -p output

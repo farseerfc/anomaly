@@ -152,6 +152,7 @@ Lucia, David Lo, Lingxiao Jiang, and Aditya Budi
 \begin{itemize}
 \item Singapore Management University
 \end{itemize}
+11 pages
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{背景 Introduction}
@@ -338,7 +339,7 @@ if ((err = device_create_file(&new_client->dev,
 \subsection{不具合があるクローンの誤検出率}
 \begin{frame}{不具合があるクローンの誤検出率}{False Positives in Anomaly Clones}
 \begin{columns}
-\begin{column}{12em}
+\begin{column}{12em}%
 \begin{center}\fcshadow{Linux Kernel}\end{center}
 \begin{tikzpicture}[scale=1.5]
 \fill[red!50,draw=red] (12:1.5cm) arc[start angle=12,delta angle=336,radius=1.5cm] 
@@ -351,10 +352,9 @@ if ((err = device_create_file(&new_client->dev,
 \draw[->,ultra thick,>=latex] (33:2cm) node {\small 17 悪い習慣} -- (12:1.75cm);
 \draw[->,ultra thick,>=latex] (-33:2cm) node {41 正解} -- (-12:1.75cm);
 \end{tikzpicture}
-
 \end{column}
-\pause
-\begin{column}{12em}
+\begin{column}{12em}%
+\visible<2->{%
 \begin{center}\fcshadow{Eclipse}\end{center}
 \begin{tikzpicture}[scale=1.5]
 \fill[red!50,draw=red] (15:1.5cm) arc[start angle=15,delta angle=326,radius=1.5cm] 
@@ -367,8 +367,7 @@ if ((err = device_create_file(&new_client->dev,
 \draw[->,ultra thick,>=latex] (33:2cm) node {\small 17 悪い習慣} -- (15:1.75cm);
 \draw[->,ultra thick,>=latex] (-33:2cm) node {21 正解} -- (-19:1.75cm);
 \end{tikzpicture}
-
-
+}%
 \end{column}
 \end{columns}
 
@@ -388,7 +387,7 @@ if ((err = device_create_file(&new_client->dev,
 {False Positives in Anomaly Clones II}
 \begin{center}\fcshadow{商用ソフトウェア\upcite{gabel2010scalable}}\end{center}
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=1.2]
 \path (0.25cm,-0.5cm) node {\small{500 確かめた}};
 \path (4.0cm,-0.5cm) node {
     \small{\mbox{8103} \mbox{不具合} \mbox{クローン}}}; 
@@ -458,7 +457,7 @@ Deckard\upcite{jiang2007deckard}
 \end{tikzpicture}
 \end{column}
 
-\pause
+\visible<2->{
 \begin{column}{5em}
 \begin{tikzpicture}
 \draw[xshift=5cm,yshift=0cm,scale=0.7] 
@@ -481,7 +480,8 @@ Deckard\upcite{jiang2007deckard}
 
 \end{tikzpicture}
 \end{column}
-\pause
+}
+\visible<3->{
 \begin{column}{5em}
 \begin{tikzpicture}
 \begin{scope}[scale=0.5,every node/.style={draw,circle}]
@@ -503,7 +503,7 @@ Deckard\upcite{jiang2007deckard}
 ;
 \end{scope}
 \end{tikzpicture}
-\end{column}
+\end{column}}
 \end{columns}
 {\tiny
 \hrule
@@ -516,7 +516,6 @@ Deckard\upcite{jiang2007deckard}
   0.4em\relax IEEE Computer Society, 2007, pp. 96--105.
 \end{thebibliography}
 }
-
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{動的洗練法 Dynamic Refinement}
