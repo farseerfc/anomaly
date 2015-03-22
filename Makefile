@@ -14,20 +14,16 @@ dist:
 169: $(MAIN).tex
 	echo "\\$(INTERACTION)" >$(MAIN).169.tex
 	echo "\\documentclass[aspectratio=169,$(SIZE),$@]{beamer}" >>$(MAIN).$@.tex
-	echo "\\setbeameroption{notes on second screen}"  >>$(MAIN).$@.tex
 	cat 169.tex >>$(MAIN).$@.tex
 	echo "\\input{$(MAIN).tex}" >>$(MAIN).$@.tex
 	$(LATEX) $(MAIN).$@ 
-	makebeamerinfo -t sane $(MAIN).$@.pdf
     
 43: $(MAIN).tex
 	echo "\\$(INTERACTION)" >$(MAIN).$@.tex
 	echo "\\documentclass[aspectratio=43,$(SIZE),$@]{beamer}" >>$(MAIN).$@.tex
-	echo "\\setbeameroption{notes on second screen}"  >>$(MAIN).$@.tex
 	cat 43.tex >>$(MAIN).$@.tex
 	echo "\\input{$(MAIN).tex}" >>$(MAIN).$@.tex
 	$(LATEX) $(MAIN).$@ 
-	makebeamerinfo -t sane $(MAIN).$@.pdf
 
 notes: $(MAIN).tex
 	echo "\\$(INTERACTION)" >$(MAIN).notes.tex
