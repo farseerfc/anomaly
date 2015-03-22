@@ -1,0 +1,290 @@
+# -*- coding: utf-8 -*-
+PageProps = {
+  1:	{
+	  'title': "Title",
+	  'transition': SlideLeft,
+	},
+  2:	{
+	  'overview': False,
+	  'title': "出典 Publication",
+	},
+  3:	{
+	  'title': "出典 Publication: 出典 Publication",
+	  'transition': SlideUp,
+	},
+  4:	{
+	  'overview': False,
+	  'title': "背景 Introduction",
+	},
+  5:	{
+	  'overview': False,
+	  'title': "背景 Introduction: 背景 Introduction",
+	},
+  6:	{
+	  'overview': False,
+	},
+  7:	{
+	  'overview': False,
+	},
+  8:	{
+	  'transition': PageTurn,
+	},
+  9:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	  'title': "背景 Introduction: 既存研究 Related Researches",
+	},
+  10:	{
+	  'overview': False,
+	  'title': "\translate {References}: 正解の例 Example of True Positive",
+	},
+  11:	{
+	  'overview': False,
+	},
+  12:	{
+	  'transition': PageTurn,
+	},
+  13:	{
+	  'title': "\translate {References}: 誤検出の例 Example of False Positive",
+	  'transition': SlideUp,
+	},
+  14:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	  'title': "\translate {References}: 不具合があるクローンの誤検出率",
+	},
+  15:	{
+	  'title': "\translate {References}",
+	  'transition': SlideLeft,
+	},
+  16:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	},
+  17:	{
+	  'overview': False,
+	  'title': "\translate {References}: コードクローンの四つの象限",
+	},
+  18:	{
+	  'overview': False,
+	},
+  19:	{
+	  'transition': SlideLeft,
+	},
+  20:	{
+	  'overview': False,
+	  'title': "クローンに基づく不具合検出",
+	},
+  21:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	  'title': "クローンに基づく不具合検出: クローンに基づく不具合検出",
+	},
+  22:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	},
+  23:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	},
+  24:	{
+	  'title': "\translate {References}",
+	  'transition': SlideLeft,
+	},
+  25:	{
+	  'overview': False,
+	  'title': "動的洗練法 Dynamic Refinement",
+	},
+  26:	{
+	  'overview': False,
+	  'title': "動的洗練法 Dynamic Refinement: 従来のクローンレポートの静的洗練法",
+	},
+  27:	{
+	  'overview': False,
+	},
+  28:	{
+	  'transition': PageTurn,
+	},
+  29:	{
+	  'overview': False,
+	  'title': "動的洗練法 Dynamic Refinement: クローンレポートの動的洗練法",
+	},
+  30:	{
+	  'transition': PageTurn,
+	},
+  31:	{
+	  'overview': False,
+	  'title': "動的洗練法 Dynamic Refinement: 動的洗練法の流れ",
+	},
+  32:	{
+	  'transition': SlideLeft,
+	},
+  33:	{
+	  'overview': False,
+	  'title': "洗練エンジン Refinement Engine",
+	},
+  34:	{
+	  'overview': False,
+	  'title': "洗練エンジン Refinement Engine: 洗練エンジンの流れ Process of Refinement Engine",
+	},
+  35:	{
+	  'transition': PageTurn,
+	},
+  36:	{
+	  'overview': False,
+	  'title': "洗練エンジン Refinement Engine: 特徴抽出: 構文木を構築",
+	},
+  37:	{
+	  'overview': False,
+	},
+  38:	{
+	  'transition': PageTurn,
+	},
+  39:	{
+	  'overview': False,
+	  'title': "洗練エンジン Refinement Engine: 特徴抽出: 五つの特徴",
+	},
+  40:	{
+	  'overview': False,
+	},
+  41:	{
+	  'overview': False,
+	},
+  42:	{
+	  'overview': False,
+	},
+  43:	{
+	  'overview': False,
+	},
+  44:	{
+	  'transition': PageTurn,
+	},
+  45:	{
+	  'overview': False,
+	  'title': "洗練エンジン Refinement Engine: 特徴抽出: 五つの特徴の例",
+	},
+  46:	{
+	  'overview': False,
+	},
+  47:	{
+	  'transition': SlideLeft,
+	},
+  48:	{
+	  'transition': PageTurn,
+	},
+  49:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	  'title': "洗練エンジン Refinement Engine: 前処理:特徴選択",
+	},
+  50:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	  'title': "\translate {References}: 前処理: Data Re-balancing",
+	},
+  51:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	},
+  52:	{
+	  'title': "\translate {References}",
+	  'transition': SlideLeft,
+	},
+  53:	{
+	  'transition': PageTurn,
+	},
+  54:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	  'title': "\translate {References}: 非ネスト汎化された最も近隣分類法",
+	},
+  55:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	},
+  56:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	},
+  57:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	},
+  58:	{
+	  'title': "\translate {References}: 分類法: 類似度の計算",
+	  'transition': SlideUp,
+	},
+  59:	{
+	  'overview': False,
+	  'title': "\translate {References}: 具体的な洗練の振舞い",
+	},
+  60:	{
+	  'overview': False,
+	},
+  61:	{
+	  'overview': False,
+	},
+  62:	{
+	  'overview': False,
+	},
+  63:	{
+	  'transition': SlideLeft,
+	},
+  64:	{
+	  'overview': False,
+	  'title': "実験評価 Experiment and Evaluation",
+	},
+  65:	{
+	  'title': "実験評価 Experiment and Evaluation: 評価方法: 平均正解発見率 APPF",
+	  'transition': SlideUp,
+	},
+  66:	{
+	  'title': "実験評価 Experiment and Evaluation: 実験の対象と設定 Settings of Empirical Evaluation",
+	  'transition': SlideUp,
+	},
+  67:	{
+	  'title': "実験評価 Experiment and Evaluation: 実験の結果 Results of the Empirical Evaluation",
+	  'transition': SlideUp,
+	},
+  68:	{
+	  'title': "実験評価 Experiment and Evaluation: Top-3 情報利得 Top-3 Information Gain",
+	  'transition': SlideUp,
+	},
+  69:	{
+	  'title': "実験評価 Experiment and Evaluation: 順番を調整した例 Example of Re-ordering",
+	  'transition': SlideUp,
+	},
+  70:	{
+	  'transition': SlideLeft,
+	},
+  71:	{
+	  'transition': SlideLeft,
+	},
+  72:	{
+	  'overview': False,
+	  'title': "考察, 結論及び今後の課題 ",
+	},
+  73:	{
+	  'title': "考察, 結論及び今後の課題 : 妥当性の考察 Threats to Validity",
+	  'transition': SlideUp,
+	},
+  74:	{
+	  'title': "考察, 結論及び今後の課題 : 結論と今後の課題 Conclusion and Future Work",
+	  'transition': SlideUp,
+	},
+  75:	{
+	  'transition': SlideLeft,
+	},
+  76:	{
+	  'transition': SlideLeft,
+	},
+  77:	{
+	  'overview': False,
+	  'title': "\translate {References}",
+	},
+  78:	{
+	  'transition': SlideLeft,
+	},
+}
+AvailableTransitions = [WipeCenterIn, WipeCenterOut, WipeUp, WipeDown, WipeLeft, WipeRight, WipeDownRight, WipeUpLeft, Crossfade, WipeBlobs]
